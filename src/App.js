@@ -156,12 +156,17 @@ function App() {
 
           <div id='main'>
                 <div className='p1'>
-                  <a href='https://to-do-list-frontend-cv25.onrender.com'><video autoPlay muted loop playsInline><source src='assets/To-Do-App-project.mp4' type='video/mp4'></source></video></a>
+                  <a href='https://to-do-list-frontend-cv25.onrender.com'>
+                     <video autoPlay muted loop playsInline><source src='assets/To-Do-App-project.mp4' type='video/mp4'></source></video>
+                 </a>
                    
                    <h2>To-Do List using Mern Stack</h2>
                 </div>
                 <div className='p1'>
-                   <video autoPlay muted loop playsInline><source src='assets/Weather App - Google Chrome 2025-09-09 14-54-08.mp4' type='video/mp4'></source></video>
+                  <a href='https://wheather-app-yx5h.onrender.com'>
+                      <video autoPlay muted loop playsInline><source src='assets/Weather App - Google Chrome 2025-09-09 14-54-08.mp4' type='video/mp4'></source></video>
+                  </a>
+                  
                    <h2>Weather-App using React and API</h2>
                 </div>
                 
