@@ -36,7 +36,7 @@ function App() {
             <a href="#contact" style={{ margin: "0 10px" }}>Contact</a>
         </div>
 
-        <a className='download' href='assets/Rohit CV.pdf' download="assets/Rohit CV.pdf">
+        <a className='download' href='assets/Rohit CV.pdf' download="Rohit CV.pdf">
           <button className='CV'>Download CV</button>
         </a>
         
@@ -65,7 +65,7 @@ function App() {
               </div>
 
               <div id='btn'>
-                  <a className='download' href='assets/Rohit CV.pdf' download="assets/Rohit CV.pdf">
+                  <a className='download' href='assets/Rohit CV.pdf' download="Rohit CV.pdf">
                      <button className='CV'>Download CV</button>
                  </a> 
               </div>
@@ -92,7 +92,7 @@ function App() {
       </motion.div>
 
      
-     {/* this about section for about me and my skills */}
+     {/* 👇 this about section for about me and my skills */}
 
       <motion.div initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ function App() {
                   <h2>My Introduction</h2>
                  <p>I’m a MERN stack developer and video editor with a passion for creating websites and apps using MongoDB, Express, React, and Node.js. Alongside coding, I enjoy editing videos and bringing creative ideas to life through visuals. Always learning and improving, I love working on projects that combine both tech and creativity.</p>
                  
-                <a className='download' href='assets/Rohit CV.pdf' download="assets/Rohit CV.pdf">
+                <a className='download' href='assets/Rohit CV.pdf' download="Rohit CV.pdf">
                    <button className='CV'>Download CV</button>
                </a>
              </motion.div>
