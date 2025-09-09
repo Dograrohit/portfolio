@@ -36,7 +36,10 @@ function App() {
             <a href="#contact" style={{ margin: "0 10px" }}>Contact</a>
         </div>
 
-        <button className='CV'>Download CV</button>
+        <a className='download' href='assets/Rohit CV.pdf'>
+          <button className='CV'>Download CV</button>
+        </a>
+        
 
       </nav>
 
@@ -62,7 +65,9 @@ function App() {
               </div>
 
               <div id='btn'>
-                   <button className='CV'>Download CV</button>
+                  <a className='download' href='assets/Rohit CV.pdf'>
+                     <button className='CV'>Download CV</button>
+                 </a> 
               </div>
 
               <div className='social'>
@@ -104,7 +109,9 @@ function App() {
                   <h2>My Introduction</h2>
                  <p>I’m a MERN stack developer and video editor with a passion for creating websites and apps using MongoDB, Express, React, and Node.js. Alongside coding, I enjoy editing videos and bringing creative ideas to life through visuals. Always learning and improving, I love working on projects that combine both tech and creativity.</p>
                  
-                 <button className='CV'>Download CV</button>
+                <a className='download' href='assets/Rohit CV.pdf'>
+                   <button className='CV'>Download CV</button>
+               </a>
              </motion.div>
         </div>
 

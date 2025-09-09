@@ -64,10 +64,15 @@ nav #links a{
   color: var(--text2-color);
 }
 
-.CV {
-  position: relative;
+.download{
   width: 150px;
   height: 60%;
+}
+
+.CV {
+  position: relative;
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
   background: transparent;
   border: 2px solid var(--border-color);
@@ -244,7 +249,7 @@ nav #links a{
    flex-direction: column;
 }
 
-#about #about-me #about-box button{
+#about #about-me #about-box a{
   height: 15%;
 }
 
