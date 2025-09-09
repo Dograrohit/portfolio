@@ -1,0 +1,440 @@
+html{
+  scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&family=Moon+Dance&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+  padding: 0%;
+  margin: 0%;
+  font-family: "Noto Sans", sans-serif;
+}
+
+:root{
+   
+  /* this root is for border,base and background-color */
+
+  --border-color: #00b4d8;
+  --base-color:#0065d8;
+  --background-color:#fff4e4;
+
+  /*text color in every div, Headers and P tags */
+
+  --text-color:#d8d8d8;
+  --text2-color:black;
+  --text3-color:#2470fd;
+
+}
+
+nav{
+  width: 100%;
+  height: 70px;
+  border-bottom: 10px solid var(--border-color);
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+
+nav img{
+  width: auto;
+  height: 100%;
+  scale: 1.5;
+  object-fit: cover;
+  overflow: hidden;
+}
+nav #links{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav #links a{
+  width: 20%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  text-decoration: none;
+  color: var(--text2-color);
+}
+
+.CV {
+  position: relative;
+  width: 150px;
+  height: 60%;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid var(--border-color);
+  color: var(--base-color);
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.CV::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -100%; /* hidden below button */
+  width: 100%;
+  height: 100%;
+  background-color: var(--base-color);
+  border-radius: 20px;
+  z-index: -1;
+  transition: bottom 0.3s ease;
+}
+
+.CV:hover::after {
+  bottom: 0;
+}
+
+.CV:hover {
+  color: white;
+}
+
+/* Style for Home Section */
+
+#home{
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6%;
+}
+ 
+#home #text{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#home #text #type{
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0%;
+}
+#home #text #type h1{
+  font-size: 40px;
+  margin: 0%;
+}
+
+#home #text #type #h1{
+  color: var(--text3-color);
+}
+
+#home #text #dis{
+  width: 90%;
+  height: auto;
+  margin-top: 20px;
+  font-size: 20px;
+  color: var(--text2-color);
+}
+
+#home #text #btn{
+  width: 90%;
+  height: 12%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#home #text .name{
+  width: 90%;
+  height: auto;
+  padding: 0%;
+  margin: 60px 0px 0px 0px ;
+}
+#home #text .name h4{
+  background-color: var(--base-color);
+  color: white;
+  width: 14%;
+  height: auto;
+  border-radius: 5px;
+  padding: 0px 10px;
+  margin: 0%;
+  font-size: 14px;
+}
+
+#home .social{
+   width: 90%;
+   height: 8%;
+   margin-top: 60px;
+   display: flex;
+   justify-content: start;
+   align-items: center;
+}
+#home .social a{
+  width: 32px;
+  height: 32px;
+  margin-left: 40px;
+  text-decoration: none;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 6px var(--text2-color);
+  border: none;
+  outline: none;
+}
+
+#home .social a .brand{
+  width: auto;
+  height: 80%;
+  border: none;
+  outline: none;
+}
+
+
+#home #avtar{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home #avtar img{
+  width: 400px;
+  height: 400px;
+  border: 5px solid var(--border-color);
+  border-radius: 55% 45% 55% 45%;
+}
+
+
+/* Style for About Section */
+#about{
+  height: 95vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about #about-me{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about #about-me #about-box{
+   width: 75%;
+   height: 50%;
+   padding: 15px 40px;
+   border: 2px solid var(--border-color);
+   border-radius: 140px;
+   box-shadow: 5px 8px 20px var(--base-color);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+#about #about-me #about-box button{
+  height: 15%;
+}
+
+#about #about-me #about-box h2{
+  color: var(--text2-color);
+}
+
+#about #skills{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about #skills #skills-set{
+  width: 75%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#about #skills #skills-set li{
+  padding: 5% 0px;
+  list-style-type: none;
+  color: var(--text2-color);
+}
+
+#about #skills #skills-set label{
+  background-color: var(--base-color);
+  color: var(--text-color);
+  padding: 0px 18px;
+  border-radius: 10px;
+}
+
+/*👇 this CSS is for project section*/
+
+#Project{
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5% 0px ;
+}
+
+#Project #main{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(1,500px);
+  grid-template-columns: repeat(2,1fr);
+  place-items: center;
+}
+
+#Project #main .p1{
+  width: 90%;
+  height: 85%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 5px 5px 20px black;
+  border-radius: 20px;
+}
+
+#Project #main .p1 a{
+  width: 100%;
+  height: 90%;
+}
+
+.p1 video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*👇 contact section styling begins from here*/
+
+#contact{
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6% 0%;
+}
+
+#contact #contact-box{
+  width: 80%;
+  height: 400px;
+  background-color: var(--base-color);
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.7s;
+}
+#contact #contact-box:hover{
+  background-color:#368cee;
+}
+
+#contact #contact-box #text{
+  width: auto;
+  height: auto;
+  color: var(--text-color);
+}
+
+#contact #contact-box #text h2{
+  font-weight: 1000;
+}
+#contact #contact-box #text h3{
+  font-weight: 400;
+}
+
+
+/* know footer */
+
+footer{
+  width: 100%;
+  height: auto;
+  padding: 3% 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+footer #footer-text{
+  width: auto;
+  height: 250px;
+  padding: 0% 5%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer #footer-text #nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer #footer-text #nav a{
+  text-decoration: none;
+  color: var(--text2-color);
+  font-weight: 700;
+}
+
+footer #footer-text #links{
+   width: 100%;
+   height: auto;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   margin-top: 10px;
+}
+
+footer #footer-text #links a{
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 6px var(--text2-color);
+  border: none;
+  outline: none;
+}
+
+footer #footer-text #links a .brand{
+  width: auto;
+  height: 60%;
+  border: none;
+  outline: none;
+  object-fit: cover;
+}
+
+footer #back{
+  text-decoration: none;
+}
+
+
+
