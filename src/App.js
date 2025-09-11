@@ -19,6 +19,13 @@ function App() {
   }
 const closeMenu = () => setslide(false);
 
+const scrollToSection = (e, id) => {
+  e.preventDefault();          // stop default jump / new page
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  closeMenu();
+};
+
+
   useEffect(()=>{
       let typed = new Typed(el.current,{
         strings:["Developer","Video Editer"],
@@ -39,10 +46,10 @@ const closeMenu = () => setslide(false);
         <img src='assets/RD logo.png' alt='My Logo'></img>
         
         <div id='links'>
-            <a href="#home" style={{ margin: "0 10px" }}>Home</a>
-            <a href="#about" style={{ margin: "0 10px" }}>About</a>
-            <a href="#Project" style={{ margin: "0 10px" }}>Project</a>
-            <a href="#contact" style={{ margin: "0 10px" }}>Contact</a>
+            <a href="#home" style={{ margin: "0 10px" }} onClick={(e) => scrollToSection(e, "home")}>Home</a>
+            <a href="#about" style={{ margin: "0 10px" }} onClick={(e) => scrollToSection(e, "about")}>About</a>
+            <a href="#Project" style={{ margin: "0 10px" }} onClick={(e) => scrollToSection(e, "Project")}>Project</a>
+            <a href="#contact" style={{ margin: "0 10px" }} onClick={(e) => scrollToSection(e, "contact")}>Contact</a>
         </div>
 
         <a className='download' href='assets/Rohit CV.pdf' download="Rohit CV.pdf">
@@ -70,10 +77,10 @@ const closeMenu = () => setslide(false);
 
           <div id='slide'>
                 <div id='links'>
-            <a onClick={closeMenu} href="#home" style={{ margin: "0 10px" }}>Home</a>
-            <a  onClick={closeMenu} href="#about" style={{ margin: "0 10px" }}>About</a>
-            <a  onClick={closeMenu} href="#Project" style={{ margin: "0 10px" }}>Project</a>
-            <a  onClick={closeMenu} href="#contact" style={{ margin: "0 10px" }}>Contact</a>
+            <a onClick={(e) => scrollToSection(e, "home")} href="#home" style={{ margin: "0 10px" }}>Home</a>
+            <a onClick={(e) => scrollToSection(e, "about")} href="#about" style={{ margin: "0 10px" }}>About</a>
+            <a onClick={(e) => scrollToSection(e, "Project")} href="#Project" style={{ margin: "0 10px" }}>Project</a>
+            <a onClick={(e) => scrollToSection(e, "contact")} href="#contact" style={{ margin: "0 10px" }}>Contact</a>
                 </div>
 
             <a className='download' href='assets/Rohit CV.pdf'      download="Rohit CV.pdf">
@@ -239,10 +246,10 @@ const closeMenu = () => setslide(false);
                 <h3>ROHIT DOGRA</h3>
 
                 <div id='nav-footer'>
-                    <a href="#home" style={{ margin: "0 10px" }}>Home</a>
-                    <a href="#about" style={{ margin: "0 10px" }}>About</a>
-                    <a href="#Project" style={{ margin: "0 10px" }}>Project</a>
-                    <a href="#contact" style={{ margin: "0 10px" }}>Contact</a>
+                    <a onClick={(e) => scrollToSection(e, "home")} href="#home" style={{ margin: "0 10px" }}>Home</a>
+                    <a onClick={(e) => scrollToSection(e, "about")} href="#about" style={{ margin: "0 10px" }}>About</a>
+                    <a onClick={(e) => scrollToSection(e, "Project")} href="#Project" style={{ margin: "0 10px" }}>Project</a>
+                    <a onClick={(e) => scrollToSection(e, "contact")} href="#contact" style={{ margin: "0 10px" }}>Contact</a>
                 </div>
 
                 <div id='links'>
