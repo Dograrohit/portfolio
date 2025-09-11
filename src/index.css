@@ -32,11 +32,10 @@
       font-size: 30px;
       margin-right: 30px;
      }
-
-
-   #slider{
-    display: flex;
-   }
+     
+    #slider{
+      display: flex;
+    }
 
 .download{
   width: 150px;
@@ -93,9 +92,6 @@
   margin: 0px 0px -30px 0px;
 }
 
-#home .social{
-   margin: 0%;
-}
 
 
 #home #avtar{

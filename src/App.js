@@ -68,10 +68,10 @@ const scrollToSection = (e, id) => {
 
         {/* Overlay that closes menu on click */}
       {slide && <motion.div initial={{opacity:0}} animate={{opacity:1}}
-      exit={{opacity:0}} transition={{duration:0.5}} className="overlay show"/>}
+      exit={{opacity:0}} transition={{duration:0.5}} className="overlay show" onClick={closeMenu}/>}
 
-<motion.div id='slider' initial={{x:'-50%'}}
-                       animate={{x:slide ? "0%" : "-50%"}}
+<motion.div id='slider' initial={{x:'-100%'}}
+                       animate={{x:slide ? "0" : "-100%"}}
                        transition={{ type: "tween", duration: 0.3 }}
 >
 
@@ -253,7 +253,7 @@ const scrollToSection = (e, id) => {
                 </div>
 
                 <div id='links'>
-                   <a href='https://www.facebook.com/rohit.dogra.560' style={{marginLeft:"0px"}}><FontAwesomeIcon className='brand' icon={faFacebook}></FontAwesomeIcon></a>
+                  <a href='https://www.facebook.com/rohit.dogra.560' style={{marginLeft:"0px"}}><FontAwesomeIcon className='brand' icon={faFacebook}></FontAwesomeIcon></a>
                   <a href='https://github.com/Dograrohit?tab=repositories'><FontAwesomeIcon className='brand' icon={faGithub}></FontAwesomeIcon></a>
                   <a href='https://www.instagram.com/rohit.dogra777/'><FontAwesomeIcon className='brand' icon={faInstagram}></FontAwesomeIcon></a>
                   <a href='https://www.linkedin.com/in/rohit-dogra-a40ba334b/'><FontAwesomeIcon className='brand' icon={faLinkedinIn}></FontAwesomeIcon></a>
