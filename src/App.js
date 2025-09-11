@@ -1,14 +1,23 @@
 import './App.css';
-import { useEffect, useRef } from 'react';
+import './index.css';
+import { useEffect, useRef, useState } from 'react';
 import Typed from 'typed.js';
 import { motion} from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
+import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const el = useRef(null);
+  const [slide,setslide] = useState(false)
+
+  const toggle = ()=>{
+    setslide((prev)=>!prev)
+  }
+const closeMenu = () => setslide(false);
 
   useEffect(()=>{
       let typed = new Typed(el.current,{
@@ -26,7 +35,7 @@ function App() {
   },[])
   return (
     <>
-       <nav>
+       <nav id='nav'>
         <img src='assets/RD logo.png' alt='My Logo'></img>
         
         <div id='links'>
@@ -42,6 +51,38 @@ function App() {
         
 
       </nav>
+ 
+    {/* Nav for mobile Screens */}
+
+       <nav id='nav2'>
+          <img src='assets/RD logo.png' alt='My Logo'></img>
+           <button onClick={toggle}><FontAwesomeIcon icon={slide ? faTimes : faBars}></FontAwesomeIcon> </button>
+       </nav>
+
+        {/* Overlay that closes menu on click */}
+      {slide && <motion.div initial={{opacity:0}} animate={{opacity:1}}
+      exit={{opacity:0}} transition={{duration:0.5}} className="overlay show"/>}
+
+<motion.div id='slider' initial={{x:'-50%'}}
+                       animate={{x:slide ? "0%" : "-50%"}}
+                       transition={{ type: "tween", duration: 0.3 }}
+>
+
+          <div id='slide'>
+                <div id='links'>
+            <a onClick={closeMenu} href="#home" style={{ margin: "0 10px" }}>Home</a>
+            <a  onClick={closeMenu} href="#about" style={{ margin: "0 10px" }}>About</a>
+            <a  onClick={closeMenu} href="#Project" style={{ margin: "0 10px" }}>Project</a>
+            <a  onClick={closeMenu} href="#contact" style={{ margin: "0 10px" }}>Contact</a>
+                </div>
+
+            <a className='download' href='assets/Rohit CV.pdf'      download="Rohit CV.pdf">
+                 <button className='CV'>Download CV</button>
+            </a>
+
+          </div>
+    
+</motion.div>
 
       {/* Sections */}
 
@@ -197,7 +238,7 @@ function App() {
            <div id='footer-text'>
                 <h3>ROHIT DOGRA</h3>
 
-                <div id='nav'>
+                <div id='nav-footer'>
                     <a href="#home" style={{ margin: "0 10px" }}>Home</a>
                     <a href="#about" style={{ margin: "0 10px" }}>About</a>
                     <a href="#Project" style={{ margin: "0 10px" }}>Project</a>
