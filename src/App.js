@@ -234,7 +234,7 @@ const scrollToSection = (e, id) => {
                   <div id='text'>
                      <h2>Find Me</h2>
                      <h3>Name: Rohit Dogra</h3>
-                     <h3>Email: sastanoobie5@gmail.com </h3>
+                     <h3>Email: rohitdograji768@gmail.com </h3>
                      <h3>Tel: 8800360161</h3>
                      
                   </div>
